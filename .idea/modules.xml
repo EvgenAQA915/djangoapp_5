@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Django_app.iml" filepath="$PROJECT_DIR$/.idea/Django_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Python Hexlet/.idea/Python Hexlet.iml" filepath="$PROJECT_DIR$/../Python Hexlet/.idea/Python Hexlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Savigart_auto_python/.idea/Savigart_auto_python.iml" filepath="$PROJECT_DIR$/../Savigart_auto_python/.idea/Savigart_auto_python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pythonProject1/.idea/pythonProject1.iml" filepath="$PROJECT_DIR$/../pythonProject1/.idea/pythonProject1.iml" />
+    </modules>
+  </component>
+</project>

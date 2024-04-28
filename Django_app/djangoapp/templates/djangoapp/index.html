@@ -1,0 +1,16 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'djangoapp/style.css' %}">
+    </head>
+    <body>
+        <h1> This is index template</h1>
+        <h4>
+            {% for item in items %}
+            <a href="{% url 'djangoapp:detail' item.id %}">
+            ID: {{item.id}} | Имя: {{item.name}} | Цена: {{item.price}} | Описание: {{item.description}} <br/>
+            <a>
+            {% endfor %}
+        </h4>
+    </body>
+</html>
