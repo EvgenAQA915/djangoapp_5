@@ -1,18 +1,21 @@
+{% extends "djangoapp/base.html" %}
 {% load static %}
-<html>
-    <head>
-        <link rel="stylesheet" href="{% static 'djangoapp/styles.css' %}">
-    </head>
-    <body >
-    <nav>
-        <div>
-            <div>
-                <div>
-                    <div class="flex">
+
+{% block content %}
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div >
+                        <a href="#" class="flex items-center px-2 py-4">
                         <img class="h-8 w-8" src="{% static 'djangoapp/images/shop.png' %}" alt="logo"/>
-                        <span class="text-xl">E-Shop</span>
+                        <span class="text-gray-600 font-semibold text-xl">E-Shop</span>
+                        </a>
                     </div>
-                </div>
+                <div class="items-center flex space-x-1">
+                        <a href="#" class="py-4 px-2 text-gray-600 font-semibold border-b-4 border-green-600">Home</a>
+                        <a href="#" class="py-4 px-2 text-gray-600 font-semibold">About</a>
+                        <a href="#" class="py-4 px-2 text-gray-600 font-semibold">Contacts</a>
             </div>
         </div>
     </nav>
@@ -24,5 +27,4 @@
             <a>
             {% endfor %}
         </h4>
-    </body>
-</html>
+        {% endblock content %}
