@@ -8,6 +8,7 @@
             {% for item in items %}
             <a href="{% url 'djangoapp:detail' item.id %}">
             ID: {{item.id}} | Имя: {{item.name}} | Цена: {{item.price}} | Описание: {{item.description}} <br/>
+                 <img src="{{item.image.url}}" alt="">
             <a>
             {% endfor %}
         </h4>
