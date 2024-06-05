@@ -1,14 +1,12 @@
 from django.urls import path
-from djangoapp.views import index, indexItem, add_item, update_item, delete_item
+from .views import register
+from django.contrib.auth.views import LoginView, LogoutView
 
-app_name = "djangoapp"
+app_name = "users"
 
 urlpatterns = [
-    # http://127.0.0.1:8000/djangoapp/
-    path("", index,name="index"),
-    path("<int:my_id>/", indexItem, name="detail"),
-    # http://127.0.0.1:8000/djangoapp/
-    path("additem/", add_item, name="add_item"),
-    path("updateitem/<int:my_id>/", update_item, name="update_item"),
-    path("deleteitem/<int:my_id>/", delete_item, name="delete_item"),
+    # http://127.0.0.1:8000/users/
+    path("register/", register, name="register"),
+    path("login/", LoginView.as_view(template_name='users/login.html'), name="login"),
+    path("logout/", LogoutView.as_view(template_name='users/logout.html'), name="logout"),
 ]
