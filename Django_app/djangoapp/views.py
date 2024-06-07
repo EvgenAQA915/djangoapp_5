@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Product
+from django.contrib.auth.decorators import login_required
+
 
 def index(request):
     items = Product.objects.all()
@@ -15,8 +17,9 @@ def indexItem(request, my_id):
     context = {
         'item': item
     }
-    return render(request,"djangoapp/detail.html", context=context)
+    return render(request, "djangoapp/detail.html", context=context)
 
+@login_required
 def add_item(request):
     if request.method == 'POST':
         name = request.POST.get("name")

@@ -4,15 +4,21 @@
             <div class="flex justify-between">
                 <div class="flex space-x-7">
                     <div >
-                        <a href="#" class="flex items-center px-2 py-4">
+                        <a href="{% url 'djangoapp:index' %}" class="flex items-center px-2 py-4">
                         <img class="h-8 w-8" src="{% static 'djangoapp/images/shop.png' %}" alt="logo"/>
                         <span class="text-gray-600 font-semibold text-xl">E-Shop</span>
-                        </a>
+                    </a>
                     </div>
                 <div class="items-center flex space-x-1">
-                        <a href="#" class="py-4 px-2 text-gray-600 font-semibold border-b-4 border-green-600">Home</a>
+                        <a href="{% url 'djangoapp:index' %}" class="py-4 px-2 text-gray-600 font-semibold border-b-4 border-green-600">Home</a>
                         <a href="#" class="py-4 px-2 text-gray-600 font-semibold">About</a>
                         <a href="#" class="py-4 px-2 text-gray-600 font-semibold">Contacts</a>
-            </div>
+                        {% if user.is_authenticated %}
+                          <a class="py-4 px-2 text-gray-600 font-semibold" href="{% url 'users:logout' %}">Logout</a>
+                          <a class="py-4 px-2 text-gray-600 font-semibold" href="{% url 'users:profile' %}">Profile</a>
+                          {% else %}
+                          <a class="py-4 px-2 text-gray-600 font-semibold" href="{% url 'users:login' %}">Login</a>
+                        {% endif %}
+                </div>
         </div>
-    </nav>
+</nav>
