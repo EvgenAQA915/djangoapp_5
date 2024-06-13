@@ -1,5 +1,5 @@
 from django.urls import path
-from djangoapp.views import add_item, update_item, delete_item, ProductListView, ProductDetailView
+from djangoapp.views import add_item, update_item, delete_item, ProductListView, ProductDetailView, ProductDeleteView
 
 app_name = "djangoapp"
 
@@ -11,5 +11,5 @@ urlpatterns = [
     # http://127.0.0.1:8000/djangoapp/
     path("additem/", add_item, name="add_item"),
     path("updateitem/<int:my_id>/", update_item, name="update_item"),
-    path("deleteitem/<int:my_id>/", delete_item, name="delete_item"),
+    path("deleteitem/<int:pk>/", ProductDeleteView.as_view(), name="delete_item"),
 ]
