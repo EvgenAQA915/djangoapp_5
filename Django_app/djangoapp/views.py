@@ -18,6 +18,7 @@ class ProductListView(ListView):
     model = Product
     template_name = "djangoapp/index.html"
     context_object_name = "items"
+    paginate_by = 2
 
 #def indexItem(request, my_id):
     #item = Product.objects.get(id=my_id)
