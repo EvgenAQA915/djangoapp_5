@@ -133,3 +133,6 @@ MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = 'djangoapp:index'
 LOGIN_URL = 'users:login'
 #LOGOUT_REDIRECT_URL = 'djangoapp:index'
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51PRbKfE0deQtxfxLMTlb62apXLPKRzcFbvm47vQFY1IprRYniIaLnySA46i64JyJyCw5VI6hjwJv0KAYKElaToq400LN473hpN'
+STRIPE_SECRET_KEY = 'sk_test_51PRbKfE0deQtxfxLMhGPLPuU0VohUmsmdcONhc49xc7g99cNSzEQyYSBHL0jpuyKyUG4n2bhA1fpOnSq5BCaBL6B00s8fVlcu9'
